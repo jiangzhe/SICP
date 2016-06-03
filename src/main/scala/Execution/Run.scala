@@ -75,5 +75,22 @@ object Run {
 //    val ex37 = new Ex37 {}
 //    println(ex37.contFrac(_ => 1.0, _ => 1.0, 30))
 //    println(ex37.contFracIter(_ => 1.0, _ => 1.0, 30))
+//    val ex38 = new Ex38 {}
+//    println(ex38.calcE(30))
+//    val ex39 = new Ex39 {}
+//    println(ex39.tanCf(3.1416 / 3, 50))
+//    val newton2 = new Newton2 {}
+//    println(newton2.newtonMethod(x => x*x - 3, 0.0))
+//    val ex40 = new Ex40 {}
+//    println(ex40.solve(2,1,0))
+//    val ex43 = new Ex43 {}
+//    def square(x: Double): Double = x * x
+//    println(ex43.repeat(square, 2)(5))
+//    val ex45 = new Ex45 with Ex35
+//    val newton2 = new Newton2 {}
+//    def f = (x: Double) => 10.0 / x / x
+//    println("average " + ex45.fixedPoint(ex45.averageDampK(f, 1), 2.0))
+//    println("newton " + newton2.newtonMethod(f, 1.5))
+
   }
 }

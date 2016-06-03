@@ -9,7 +9,7 @@ package chapter1
   * --
   */
 trait Ex35 {
-  def tolerance = 0.00001
+  def tolerance = 0.0000001
   def fixedPoint(f: Double => Double, firstGuess: Double): Double = {
     def closeEnough(v1: Double, v2: Double): Boolean = Math.abs(v1 - v2) < tolerance
     def iter(guess: Double): Double = {

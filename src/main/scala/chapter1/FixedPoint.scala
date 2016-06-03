@@ -9,7 +9,7 @@ package chapter1
   * --
   */
 trait FixedPoint {
-  def tolerance = 0.00001
+  def tolerance = 0.000001
   def fixedPoint(f: Double => Double, firstGuess: Double): Double = {
     def closeEnough(v1: Double, v2: Double) = Math.abs(v1 - v2) < tolerance
     def tryGuess(guess: Double): Double = {
