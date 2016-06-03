@@ -19,6 +19,7 @@ trait Ex19 {
       } else {
         val newP = p * p + q * q
         val newQ = q * q + 2 * p * q
+        println(s"p = $p, q = $q")
         iter(a, b, newP, newQ, count >> 1)
       }
     iter(1, 0, 0, 1, n)
