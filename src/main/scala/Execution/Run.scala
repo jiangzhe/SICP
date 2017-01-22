@@ -1,6 +1,7 @@
 package execution
 
 import chapter1._
+import chapter2.Ex16
 
 /**
  * Created by TOSHIBA on 2015/5/26.
@@ -91,6 +92,49 @@ object Run {
 //    def f = (x: Double) => 10.0 / x / x
 //    println("average " + ex45.fixedPoint(ex45.averageDampK(f, 1), 2.0))
 //    println("newton " + newton2.newtonMethod(f, 1.5))
+
+    object ex16 extends Ex16 {
+      def run(): Unit = {
+        val expr1 = lit(10, 50) + const(10)
+        println(s"$expr1 = ${evaluateRaw(expr1)}")
+        println()
+
+        val expr2 = lit(10, 50) - const(5)
+        println(s"$expr2 = ${evaluateRaw(expr2)}")
+        println()
+
+        val expr3 = lit(10, 50) * const(2)
+        println(s"$expr3 = ${evaluateRaw(expr3)}")
+        println()
+
+        val expr4 = lit(10, 50) / const(2)
+        println(s"$expr4 = ${evaluateRaw(expr4)}")
+        println()
+
+        val expr5 = lit(10, 50) + const(50) - lit(10, 50)
+        println(s"$expr5 = ${evaluateRaw(expr5)}")
+        println(s"${expr5.simplify} = ${evaluateRaw(expr5.simplify)}")
+        println()
+
+        val expr6 = lit(10, 50) * lit(4, 50) / (lit(10, 50) + lit(4, 50))
+        println(s"$expr6 = ${evaluateRaw(expr6)}")
+        println(s"${expr6.simplify} = ${evaluateRaw(expr6.simplify)}")
+        println()
+
+        val expr7 = lit(10, 5) * lit(10, 5) / lit(10,5)
+        println(s"$expr7 = ${evaluateRaw(expr7)}")
+        println(s"${expr7.simplify} = ${evaluateRaw(expr7.simplify)}")
+        println()
+
+        val expr8 = (const(2) / lit(10, 5)) / (const(3) / lit(10, 5)) * lit(10, 5)
+        println(s"$expr8 = ${evaluateRaw(expr8)}")
+        println(s"${expr8.simplify} = ${evaluateRaw(expr8.simplify)}")
+        println()
+      }
+    }
+
+    ex16.run()
+
 
   }
 }
